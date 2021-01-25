@@ -7,6 +7,7 @@ services:
 
 # Pre-testing installs
 install:
+  - cd udagram-feed
   - npm ci # install node_modules
   - npm run build # create prod files for the application, which are inside the folder www/
 
@@ -16,7 +17,7 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t udagram-feed .
+  - docker build -t udagram-feed udagram-feed/Dockerfile
   - docker tag udagram-feed "$DOCKER_USERNAME"/udagram-feed:latest
 
 # Tasks to perform after the process is successful. Formatting the Docker username and password as below enables you to programmatically log in without having the password exposed in logs.
