@@ -1,0 +1,12 @@
+FROM node:12
+
+WORKDIR /use/src/app
+
+COPY ./www .
+
+RUN npm ci
+
+EXPOSE 8080
+
+CMD ["npm", "start"]
+
