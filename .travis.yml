@@ -15,7 +15,7 @@ before_script:
   - docker --version # print the version for logging
 
 script:
-  - ./build_node.sh $PROJECT
+  - ./build.sh $PROJECT
 
 # Tasks to perform after the process is successful. Formatting the Docker username and password as below enables you to programmatically log in without having the password exposed in logs.
 after_success:
