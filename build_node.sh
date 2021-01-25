@@ -1,8 +1,7 @@
 #!/bin/bash
-PROJECT=$1
 echo 'build node script'
-cd $PROJECT
-npm ci
+PROJECT=$1
+
 npm run build
 
 docker build -t $PROJECT .

@@ -1,5 +1,8 @@
 #!/bin/bash
 PROJECT=$1
+cd $PROJECT
+npm ci
+
 if [ $PROJECT = 'udagram-frontend' ]; then
 	./build_frontend.sh $PROJECT
 else 
