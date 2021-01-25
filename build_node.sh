@@ -1,5 +1,6 @@
 #!/bin/bash
 PROJECT=$1
+echo 'build node script'
 cd $PROJECT
 npm ci
 npm run build

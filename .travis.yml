@@ -9,6 +9,7 @@ jobs:
   include:
     - env: PROJECT=udagram-feed
     - env: PROJECT=udagram-user
+    - env: PROJECT=udagram-frontend
 
 before_script:
   - docker --version # print the version for logging
