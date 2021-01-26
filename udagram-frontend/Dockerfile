@@ -1,13 +1,17 @@
-FROM node:12
+FROM beevelop/ionic AS ionic
 
 WORKDIR /usr/src/app
 
-COPY . .
+COPY package*.json ./
 
 RUN npm ci
 
-RUN npm install -g @ionic/cli@6.12.3
+COPY . .
 
-EXPOSE 8100
+RUN ionic build
 
-CMD ["ionic", "serve", "--public-host=localhost", "--external","--no-open"]
+FROM nginx:alpine
+
+COPY --from=ionic /usr/src/app/www /usr/share/nginx/html
+
+EXPOSE 80
