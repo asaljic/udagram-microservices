@@ -1,6 +1,6 @@
 FROM node:12
 
-WORKDIR /use/src/app
+WORKDIR /usr/src/app
 
 COPY . .
 
@@ -10,4 +10,4 @@ RUN npm install -g @ionic/cli@6.12.3
 
 EXPOSE 8100
 
-CMD ["ionic", "serve", "--external", "--public-host=localhost" ,"--no-open"]
+CMD ["ionic", "serve", "--public-host=localhost" ,"--no-open"]
