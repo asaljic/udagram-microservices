@@ -2,7 +2,7 @@ FROM node:12
 
 WORKDIR /use/src/app
 
-COPY ./www ./www
+COPY . .
 
 RUN npm install -g @ionic/cli:6.12.3
 
