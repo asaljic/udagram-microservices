@@ -1,3 +1,4 @@
 set_env.sh
+udagram-secret.yaml
 docker-env-file.list
 udagram-api/
