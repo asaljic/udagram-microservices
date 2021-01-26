@@ -18,6 +18,13 @@ spec:
         - name: udagram-feed
           image: gentoise/udagram-feed
           imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "1024Mi"
+              cpu: "500m"
           ports:
             - containerPort: 8080
           envFrom:
