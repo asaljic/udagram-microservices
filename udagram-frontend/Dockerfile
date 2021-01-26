@@ -4,6 +4,8 @@ WORKDIR /use/src/app
 
 COPY . .
 
+RUN npm ci
+
 RUN npm install -g @ionic/cli@6.12.3
 
 EXPOSE 8100
