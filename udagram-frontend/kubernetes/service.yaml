@@ -5,6 +5,7 @@ metadata:
     app: udagram-frontend
   name: udagram-frontend-svc
 spec:
+  type: LoadBalancer
   ports:
     - name: "8080"
       port: 8100
