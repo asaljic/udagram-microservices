@@ -10,4 +10,4 @@ RUN npm install -g @ionic/cli@6.12.3
 
 EXPOSE 8100
 
-CMD ["ionic", "serve"]
+CMD ["ionic", "serve", "--external", "--no-open"]
