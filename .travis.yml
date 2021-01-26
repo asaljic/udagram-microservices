@@ -10,6 +10,7 @@ jobs:
     - env: PROJECT=udagram-feed
     - env: PROJECT=udagram-user
     - env: PROJECT=udagram-frontend
+    - env: PROJECT=reverse-proxy
 
 before_script:
   - docker --version # print the version for logging
