@@ -1,7 +1,7 @@
 #!/bin/bash
 PROJECT=$1
 
-if [$PROJECT = 'udagram-frontend'] || [$PROJECT = 'udagram-feed'] || [$PROJECT = 'udagram-user'];
+if [[$PROJECT = 'udagram-frontend'] || [$PROJECT = 'udagram-feed'] || [$PROJECT = 'udagram-user']];
 then
     cd $PROJECT
     npm ci
